@@ -20,17 +20,13 @@ export function HeroSection() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="https://github.com"
+              href="https://github.com/jonathanleek/civic-data-warehouse"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:opacity-90 transition-all active:scale-95 flex items-center gap-2"
             >
               Explore Repository
               <ExternalLink className="w-5 h-5" />
-            </Link>
-            <Link
-              href="#"
-              className="bg-surface-container-high text-on-surface px-8 py-4 rounded-lg text-lg font-bold hover:bg-surface-container-highest transition-all active:scale-95"
-            >
-              View Mission
             </Link>
           </div>
         </div>
