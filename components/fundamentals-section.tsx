@@ -7,24 +7,18 @@ const pillars = [
     title: "Community Driven",
     description:
       "Designed and governed by the community. We prioritize the needs of local developers, advocates, and neighborhood leaders.",
-    iconBg: "bg-secondary-container",
-    iconColor: "text-on-secondary-container",
   },
   {
     icon: ShieldCheck,
     title: "Trusted Data",
     description:
       "Ensuring high-fidelity, validated data sources. We curate civic datasets with rigorous standards for accuracy and ethics.",
-    iconBg: "bg-tertiary-fixed-dim",
-    iconColor: "text-on-tertiary-fixed",
   },
   {
     icon: Database,
     title: "Open Infrastructure",
     description:
       "A scalable, cloud-native foundation that lowers the barrier to entry for analyzing public sector information.",
-    iconBg: "bg-primary-fixed-dim",
-    iconColor: "text-on-primary-fixed-variant",
   },
 ]
 
@@ -34,10 +28,14 @@ export function FundamentalsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-4xl font-bold tracking-tight mb-4 text-on-surface">
-              Building The Fundamentals
+            <div className="inline-flex items-center text-sm uppercase tracking-widest text-rust mb-6">
+              <span className="mr-2">■</span>
+              Core Pillars
+            </div>
+            <h2 className="font-serif text-4xl lg:text-5xl text-navy mb-4">
+              Building The <em className="text-rust">Fundamentals</em>
             </h2>
-            <p className="text-on-surface-variant text-lg">
+            <p className="text-navy/70 text-lg">
               Our approach focuses on three core pillars that ensure long-term
               sustainability and impact for the St. Louis region.
             </p>
@@ -47,22 +45,20 @@ export function FundamentalsSection() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="bg-surface-container-lowest p-10 rounded-xl flex flex-col h-full hover:translate-y-[-4px] transition-transform duration-300"
+              className="bg-cream p-10 border border-rust/20 flex flex-col h-full hover:border-rust/50 transition-colors duration-300"
             >
-              <div
-                className={`w-16 h-16 rounded-full ${pillar.iconBg} flex items-center justify-center mb-8 ${pillar.iconColor}`}
-              >
+              <div className="w-16 h-16 border border-navy/20 flex items-center justify-center mb-8 text-navy">
                 <pillar.icon className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-on-surface">
+              <h3 className="font-serif text-2xl text-navy mb-4">
                 {pillar.title}
               </h3>
-              <p className="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+              <p className="text-navy/70 leading-relaxed mb-8 flex-grow">
                 {pillar.description}
               </p>
               <Link
                 href="#"
-                className="text-primary font-bold flex items-center gap-2 group cursor-pointer"
+                className="text-rust text-sm uppercase tracking-widest flex items-center gap-2 group cursor-pointer"
               >
                 Learn more
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

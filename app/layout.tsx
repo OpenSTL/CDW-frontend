@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
-import { Public_Sans } from 'next/font/google'
+import { Playfair_Display, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const publicSans = Public_Sans({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-public-sans',
+  variable: '--font-playfair',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains',
   display: 'swap',
 })
 
@@ -39,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-surface">
-      <body className={`${publicSans.variable} font-sans antialiased`}>
+    <html lang="en" className="bg-cream">
+      <body className={`${playfair.variable} ${jetbrainsMono.variable} font-mono antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

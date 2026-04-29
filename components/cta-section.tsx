@@ -5,7 +5,7 @@ export function CTASection() {
   return (
     <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="signature-gradient rounded-3xl p-12 lg:p-20 text-white relative overflow-hidden shadow-2xl">
+        <div className="bg-navy p-12 lg:p-20 text-cream relative overflow-hidden border border-rust/30">
           {/* Geometric Texture */}
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
             <svg
@@ -17,10 +17,14 @@ export function CTASection() {
             </svg>
           </div>
           <div className="relative z-10 max-w-3xl">
-            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tighter mb-6 text-balance">
-              Join the Civic Community
+            <div className="inline-flex items-center text-sm uppercase tracking-widest text-rust mb-6">
+              <span className="mr-2">■</span>
+              Community
+            </div>
+            <h2 className="font-serif text-4xl lg:text-5xl mb-6 text-balance">
+              Join the <em className="text-rust">Civic Community</em>
             </h2>
-            <p className="text-white/80 text-xl lg:text-2xl mb-10 leading-relaxed">
+            <p className="text-cream/70 text-lg mb-10 leading-relaxed">
               Collaborate with developers, data scientists, and public servants
               in our Discord community. Help shape the future of civic data in
               St. Louis.
@@ -29,10 +33,10 @@ export function CTASection() {
               href="https://discord.gg/JDeZEyDRzw"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 rounded-lg text-xl font-bold shadow-xl hover:bg-surface-container-lowest transition-colors active:scale-95"
+              className="inline-flex items-center gap-3 bg-cream text-navy px-10 py-5 text-sm uppercase tracking-widest hover:bg-cream/90 transition-colors active:scale-95"
             >
               Connect on Discord
-              <MessageSquare className="w-6 h-6" />
+              <MessageSquare className="w-5 h-5" />
             </Link>
           </div>
         </div>
